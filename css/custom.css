@@ -1,0 +1,67 @@
+#about > div > h1 {
+  font-size: 3rem;
+}
+
+.list-skills-item{
+	display: inline-flex;
+	width: 47%;
+}
+.list-skills-item:nth-child(odd) {
+	margin-right: 2%;
+}
+
+.list-skills-item .progress-title{
+	flex-grow: 100;
+	margin-left:10px;
+}
+
+.list-skills-item .progress-title .progress{
+	height: 20px;
+	border: 1px solid #cecece;
+	width: 100%;
+}
+
+.list-skills-item .progress-title .title{
+	width: 100%;
+	font-size: 1rem;
+}
+
+.list-skills-item .icon{
+	display: inline-flex;
+	vertical-align: middle;
+}
+
+.subheading.mb-3{
+	border-bottom:1px solid #bdbdbd;
+	margin-bottom:10px;
+}
+
+@media screen and (min-width: 1024px) {
+    /* Styles go here */
+	.list-inline.list-icons{
+		padding-left:30px;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial',serif;
+    font-weight: 700;
+    text-transform: none;
+    color: #343a40;
+}
+
+h2{
+	font-size: 2.7rem;
+}
+
+h3{
+	font-family: 'Tahoma',serif;
+	font-weight: 400;
+}
+
+.subheading {
+    text-transform: none;
+    font-weight: 500;
+    font-family: 'Tahoma',serif;
+    font-size: 1.35rem;
+}
