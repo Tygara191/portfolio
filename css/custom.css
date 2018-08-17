@@ -19,6 +19,8 @@
 	height: 20px;
 	border: 1px solid #cecece;
 	width: 100%;
+	-webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+    color-adjust: exact !important; 
 }
 
 .list-skills-item .progress-title .title{
@@ -64,4 +66,55 @@ h3{
     font-weight: 500;
     font-family: 'Tahoma',serif;
     font-size: 1.35rem;
+}
+
+.soft-skill{
+	border-left:2px solid #0079BF;
+	margin-bottom:2rem;
+	padding: 10px;
+}
+
+.soft-skill.negative{
+	border-color: #ed2828;
+}
+
+.soft-skill p{
+	margin-bottom: 0;
+}
+
+.soft-skill-heading{
+	margin-bottom:1rem;
+}
+
+.list-inline.list-languages{
+	padding-top:2rem;
+	padding-bottom:2rem;
+}
+
+.only-print {
+	visibility: hidden;
+}
+
+.btn-download{
+	border: 1px solid;
+	color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+
+    .only-print, .only-print *
+    {
+    	visibility: visible !important;
+    }
+
+    .my-auto {
+    	margin: 0 !important;
+    }
 }

@@ -9,6 +9,20 @@ $experience = $now->diff($since_it)->y;
 
 include "skills.php";
 
+if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])){
+	$langCode = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+
+	if(isset($_GET['lang'])) $langCode = $_GET['lang'];
+
+	$langFilePath = 'lang/'.$langCode.'.php';
+
+	if(is_file($langFilePath)){
+		include $langFilePath;
+	}
+}
+
+if(!isset($lang)) include "lang/en.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +34,7 @@ include "skills.php";
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Веселин Николов - Персонална страница</title>
+	<title><?php echo $lang['page_title']; ?></title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -37,6 +51,9 @@ include "skills.php";
 	<!-- Custom styles for this template -->
 	<link href="css/resume.min.css" rel="stylesheet">
 	<link href="css/custom.css" rel="stylesheet">
+	<link rel="icon" href="img/favicon.png">
+
+	<?php if(isset($lang['head'])) echo $lang['head']; ?>
 
 </head>
 
@@ -55,25 +72,22 @@ include "skills.php";
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#about">Накратко</a>
+					<a class="nav-link js-scroll-trigger" href="#about"><?php echo $lang['menu_short']; ?></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#experience">Опит</a>
+					<a class="nav-link js-scroll-trigger" href="#experience"><?php echo $lang['menu_experience']; ?></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#education">Образование</a>
+					<a class="nav-link js-scroll-trigger" href="#education"><?php echo $lang['menu_education']; ?></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#skills">ИТ умения</a>
+					<a class="nav-link js-scroll-trigger" href="#skills"><?php echo $lang['menu_skills']; ?></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#secondarySkills">Други умения</a>
+					<a class="nav-link js-scroll-trigger" href="#softskills"><?php echo $lang['menu_soft_skills']; ?></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#goodbad">В какво съм добър</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#awards">Отличия</a>
+					<a class="nav-link js-scroll-trigger" href="#awards"><?php echo $lang['menu_awards']; ?></a>
 				</li>
 			</ul>
 		</div>
@@ -81,17 +95,19 @@ include "skills.php";
 
 	<div class="container-fluid p-0">
 		<section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-			<div>
-				<h1 class="mb-0">Веселин
-					<span class="text-primary">Николов</span>
+			<div class="my-auto">
+				<h1 class="mb-0"><?php echo $lang['name']; ?>
+					<span class="text-primary"><?php echo $lang['lastname']; ?></span>
 				</h1>
 				<div class="subheading mb-5"> 
 					<a href="mailto:vnikolov@pkdevs.com">vnikolov@pkdevs.com</a>
 				</div>
-				<p class="mb-5">Аз съм мотивиран млад IT специалист и софтуерен инженер, целящ да се развива в технологичната сфера. В момента съм на <?php echo $age; ?> години, а последните <?php echo $experience; ?> от тях съм прекарал в активни IT занимания, макар и непрофесионални.</p>
-				<ul class="list-inline list-social-icons mb-0">
+				
+				<p class="mb-5"><?php echo $lang['intro']; ?></p>
+
+				<ul class="list-inline list-social-icons mb-0 no-print">
 					<li class="list-inline-item">
-						<a href="#">
+						<a target="_blank" href="https://www.facebook.com/404.user.not.foundd">
 							<span class="fa-stack fa-lg">
 								<i class="fa fa-circle fa-stack-2x"></i>
 								<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -99,23 +115,7 @@ include "skills.php";
 						</a>
 					</li>
 					<li class="list-inline-item">
-						<a href="#">
-							<span class="fa-stack fa-lg">
-								<i class="fa fa-circle fa-stack-2x"></i>
-								<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-							</span>
-						</a>
-					</li>
-					<li class="list-inline-item">
-						<a href="#">
-							<span class="fa-stack fa-lg">
-								<i class="fa fa-circle fa-stack-2x"></i>
-								<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-							</span>
-						</a>
-					</li>
-					<li class="list-inline-item">
-						<a href="#">
+						<a target="_blank" href="https://github.com/Tygara191">
 							<span class="fa-stack fa-lg">
 								<i class="fa fa-circle fa-stack-2x"></i>
 								<i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -123,33 +123,60 @@ include "skills.php";
 						</a>
 					</li>
 				</ul>
+
+				<ul class="list-inline list-languages no-print">
+					<li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="Български"><a href="?lang=bg"><img src="img/bg.png"></a></li>
+					<li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="English"><a href="?lang=en"><img src="img/en.png"></a></li>
+				</ul>
+
+				<a href="pdf/<?php echo $lang['pdf_name']; ?>" target="_blank" class="btn btn-default btn-md btn-download no-print" role="button"><?php echo $lang['download_pdf']; ?></a>
+
+				<div class="only-print">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+					</span>
+					<span>https://github.com/Tygara191</span><br />
+
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-facebook fa-stack-1x fa-inverse" style="color:white"></i>
+					</span>
+					<span>https://www.facebook.com/404.user.not.foundd</span><br />
+
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+					</span>
+					<span>https://vnikolov.pkdevs.com</span>
+				</div>
 			</div>
 		</section>
 
 		<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
 			<div>
-				<h2 class="mb-5">Опит в ИТ сферата</h2>
+				<h2 class="mb-5"><?php echo $lang['menu_experience']; ?></h2>
 
 				<div class="resume-item d-flex flex-column flex-md-row mb-5">
 					<div class="resume-content mr-auto">
-						<h3 class="mb-0">Извънкласна дейност</h3>
-						<div class="subheading mb-3">НОИТ</div>
-						<p>По време на цялото си гимназиално образование, аз участвах ежегодно в <a href="http://edusoft.fmi.uni-sofia.bg/" target="_blank">НОИТ</a> с разнообразни проекти и разработки, като при първото ми участие ми бе връчен сребърен медал. Също така взех и участие в <a href="https://ntit.npmg.org/" target="_blank">НЕТ "Джон Атанасов"</a> през 2017 година и бях поставен на първо място в категорията си. По време на участията си получих и други отличия.</p>
-						<p>Този период беше много ценен и за моите комуникативни умения, както с някои от учителите, които често се допитваха до мен за техническа помощ и съвети, така и с новодошлите всяка година ученици в ИТ отбора в училище, които най-често аз въвеждах в програмирането. Вземах и активно участие в теоретичната им подготовка. Това ме научи да работя с по-неопитни хора от мен и да изразявам сложни принципи по разбираем начин.</p>
+						<h3 class="mb-0"><?php echo $lang['extracurricular_activity']; ?></h3>
+						<div class="subheading mb-3"><?php echo $lang['noit']; ?></div>
+						<p><?php echo $lang['extracurricular_activity_body_first']; ?></p>
+						<p><?php echo $lang['extracurricular_activity_body_second']; ?></p>
 					</div>
 					<div class="resume-date text-md-right">
-						<span class="text-primary">Септември 2013 - Март 2018</span>
+						<span class="text-primary"><?php echo $lang['september']; ?> 2013 - <?php echo $lang['march']; ?> 2018</span>
 					</div>
 				</div>
 
 				<div class="resume-item d-flex flex-column flex-md-row mb-5">
 					<div class="resume-content mr-auto">
-						<h3 class="mb-0">Уеб разработчик</h3>
-						<div class="subheading mb-3">На свободен принцип</div>
-						<p>През лятото на 2016 година се почувствах достатъчно уверен в себе си, че да се опитам да предложа услуги на freelance пазара. През този период разработих wordpress фирмен сайт, един относително голям проект с PHP/Codeigniter и един онлайн магазин, базиран на Python/Django. Предвид условията, при които работех, не мога да разкрия повече детайли за проектите.</p>
+						<h3 class="mb-0"><?php echo $lang['web_developer']; ?></h3>
+						<div class="subheading mb-3"><?php echo $lang['freelance']; ?></div>
+						<p><?php echo $lang['freelance_experience']; ?></p>
 					</div>
 					<div class="resume-date text-md-right">
-						<span class="text-primary">Май 2017 - Август 2017</span>
+						<span class="text-primary"><?php echo $lang['may']; ?> 2016 - <?php echo $lang['august']; ?> 2016</span>
 					</div>
 				</div>
 			</div>
@@ -157,39 +184,39 @@ include "skills.php";
 
 		<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
 			<div>
-				<h2 class="mb-5">Образование</h2>
+				<h2 class="mb-5"><?php echo $lang['menu_education']; ?></h2>
 
 				<div class="resume-item d-flex flex-column flex-md-row mb-5">
 					<div class="resume-content mr-auto">
-						<h3 class="mb-0">Пловдивски университет "Паисий Хилендарски"</h3>
-						<div class="subheading mb-3">Софтуерно инженерство</div>
-						<p>След излезлите на 10.07.2018г. резултати от кандидатстудентските изпити, мога да нарека себе си и студент в <a href="https://uni-plovdiv.bg/" target="_blank">Пловдивски университет</a> със специалност <a href="https://uni-plovdiv.bg/pages/index/1131/" target="_blank">Софтуерно инженерство</a>.</p>
+						<h3 class="mb-0"><?php echo $lang['pluni']; ?></h3>
+						<div class="subheading mb-3"><?php echo $lang['software_engineering']; ?></div>
+						<p><?php echo $lang['software_engineering_desc']; ?></p>
 					</div>
 					<div class="resume-date text-md-right">
-						<span class="text-primary">Септември 2018 - Настоящия момент</span>
+						<span class="text-primary"><?php echo $lang['september']; ?> 2018 - <?php echo $lang['current_moment']; ?></span>
 					</div>
 				</div>
 
 				<div class="resume-item d-flex flex-column flex-md-row mb-5">
 					<div class="resume-content mr-auto">
-						<h3 class="mb-0">Професионална гимназия по икономика - гр. Перник</h3>
-						<div class="subheading mb-3">Икономическа информатика</div>
-						<div>Извънкласни дейности - уеб и мобилна разработка</div>
-						<p>В <a href="" target="_blank">ПГИ</a> интересът ми към ИТ се превърна в професионална насока. По време на обучението ми там, училището се изяви като водеща ИТ гимназия в Перник, за което моята отдаденост през тези години допринесе значително.</p>
+						<h3 class="mb-0"><?php echo $lang['pgi']; ?></h3>
+						<div class="subheading mb-3"><?php echo $lang['pgi_h1']; ?></div>
+						<div><?php echo $lang['pgi_h2']; ?></div>
+						<p><?php echo $lang['pgi_desc']; ?></p>
 					</div>
 					<div class="resume-date text-md-right">
-						<span class="text-primary">Септември 2013 - Май 2018</span>
+						<span class="text-primary"><?php echo $lang['september']; ?> 2013 - <?php echo $lang['may']; ?> 2018</span>
 					</div>
 				</div>
 
 				<div class="resume-item d-flex flex-column flex-md-row">
 					<div class="resume-content mr-auto">
-						<h3 class="mb-0">СОУ „Д-р Петър Берон”</h3>
-						<div class="subheading mb-3">Основно образование</div>
-						<p>Най-ценното нещо, което получих по време на основното ми образование в <a href="http://www.soupetarberon.info/" target="_blank">СУ с разширено изучаване на чужди езици „Д-р Петър Берон”</a> е добро познание на английски език, както и основно ниво руски език. Също така там направих първите крачки към изучаването на HTML.</p>
+						<h3 class="mb-0"><?php echo $lang['soupberon']; ?></h3>
+						<div class="subheading mb-3"><?php echo $lang['soupberon_h1']; ?></div>
+						<p><?php echo $lang['soupberon_desc']; ?></p>
 					</div>
 					<div class="resume-date text-md-right">
-						<span class="text-primary">Септември 2006 - Май 2013</span>
+						<span class="text-primary"><?php echo $lang['september']; ?> 2006 - <?php echo $lang['may']; ?> 2013</span>
 					</div>
 				</div>
 			</div>
@@ -197,7 +224,7 @@ include "skills.php";
 
 		<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
 			<div>
-				<h2 class="mb-5">ИТ умения</h2>
+				<h2 class="mb-5"><?php echo $lang['menu_skills']; ?></h2>
 				
 				<?php foreach($skill_cats as $skills_cat): ?>
 					<div class="subheading mb-3"><?php echo $skills_cat['title']; ?></div>
@@ -221,26 +248,117 @@ include "skills.php";
 			</div>
 		</section>
 
-		<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="secondarySkills">
+		<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="softskills">
 			<div>
-				<h2 class="mb-5">Други умения</h2>
-				<p>Освен ИТ, хобитата ми включват: електротехника, механика и автомобили, аудио техника и диджейство. Свържете се с мен ако Ви трябва човек, който да има компетенции и в тези сфери.</p>
-				<p>Още нещо, което си заслужава да се спомене е умението ми да разделя определена работа между група хора и да определям ефективно задачите на всеки.</p>
+				<h2 class="mb-5"><?php echo $lang['menu_soft_skills']; ?></h2>
+				<div class="soft-skill">
+					<div class="soft-skill-heading"><?php echo $lang['ss_presenting_h']; ?></div>
+					<p><?php echo $lang['ss_presenting_desc']; ?></p>
+				</div>
+
+				<div class="soft-skill">
+					<div class="soft-skill-heading"><?php echo $lang['ss_leader_h']; ?></div>
+					<p><?php echo $lang['ss_leader_desc']; ?></p>
+				</div>
+
+				<div class="soft-skill">
+					<div class="soft-skill-heading"><?php echo $lang['ss_communicative_h']; ?></div>
+					<p><?php echo $lang['ss_communicative_desc']; ?></p>
+				</div>
+
+				<div class="soft-skill">
+					<div class="soft-skill-heading"><?php echo $lang['ss_pressure_h']; ?></div>
+					<p><?php echo $lang['ss_pressure_desc']; ?></p>
+				</div>
+
+				<div class="soft-skill">
+					<div class="soft-skill-heading"><?php echo $lang['ss_learn_h']; ?></div>
+					<p><?php echo $lang['ss_learn_desc']; ?></p>
+				</div>
+
+				<div class="soft-skill">
+					<div class="soft-skill-heading"><?php echo $lang['ss_teacher_h']; ?></div>
+					<p><?php echo $lang['ss_teacher_desc']; ?></p>
+				</div>
 			</div>
 		</section>
 
-		<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="goodbad">
+		<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
 			<div>
-				<h2 class="mb-5">В какво съм добър и в какво не съм?</h2>
-				<div class="subheading mb-3">Добър съм в...</div>
-				<ul>
-					<li>Това да карам нещата да работят. Аз съм този, който взема нещо красиво и му придава функционалност.</li>
-					<li>Винаги се старая да свършвам поставената задача по най-добрия възможен начин.</li>
-				</ul>
-				<div class="subheading mb-3">Не съм чак толкова добър в...</div>
-				<ul>
-					<li>Тъй като съм човек на точните науки, всякакъв вид creative и дизайнерска работа не ми се отдава особено. Умея да направя приличен дизайн, когато това изрично се налага, но за мен това е неприятна и трудна работа, която предпочитам да не върша.</li>
-				</ul>
+				<h2 class="mb-5"><?php echo $lang['menu_awards']; ?></h2>
+
+				<div class="subheading mb-3">2014</div>
+				<div class="row">
+					<div class="col-md-6">
+						<img src="img/NOIT_2k14.JPG" style="width: 100%;">
+					</div>
+					<div class="col-md-6">
+						<div class="row">
+							<div class="col-md-12">
+								<p><?php echo $lang['awards_2014_desc']; ?></p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12">
+								<img src="img/gramota_2k14.jpg" style="width: 100%;">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="subheading mb-3">2017</div>
+				<div class="row">
+					<div class="col-md-7">
+						<div class="row">
+							<div class="col-md-12">
+								<p><?php echo $lang['awards_2017_noit']; ?></p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12">
+								<img src="img/gramota_2k17.jpg" style="width: 100%;">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<img src="img/NOIT_2017.jpg" style="width: 100%;">
+					</div>
+				</div>
+				<hr style="page-break-after: always;" />
+				<div class="row">
+					<div class="col-md-7">
+						<img src="img/prezident.JPG" style="width: 100%;">
+					</div>
+					<div class="col-md-5">
+						<div class="row">
+							<div class="col-md-12">
+								<p><?php echo $lang['awards_2017_konkurs']; ?></p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12">
+								<img src="img/sertifikat_2k17.jpg" style="width: 100%;">
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<div class="row">
+					
+					<div class="col-md-5">
+						<div class="row">
+							<div class="col-md-12">
+								<p><?php echo $lang['awards_2017_net']; ?></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-7">
+						<img src="img/NET.jpg" style="width: 100%;">
+					</div>
+				</div>
 			</div>
 		</section>
 	</div>

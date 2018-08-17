@@ -128,18 +128,3 @@ $skills_other = [
 		"color" => "#0079BF"
 	],
 ];
-
-$skill_cats = [
-	'frontend' => [
-		'title' => "Frontend езици и инструменти",
-		'skills' => $skills_frend
-	],
-	'backend' => [
-		'title' => "Backend езици и инструменти",
-		'skills' => $skills_bend
-	],
-	'other' => [
-		'title' => "Други",
-		'skills' => $skills_other
-	],
-];
