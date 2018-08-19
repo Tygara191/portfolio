@@ -1,4 +1,11 @@
 <?php
+if(empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == "off"){
+    $redirect = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    header('HTTP/1.1 301 Moved Permanently');
+    header('Location: ' . $redirect);
+    exit();
+}
+
 $now = new DateTime();
 
 $birth = new DateTime('1999-06-25');
@@ -96,11 +103,18 @@ if(!isset($lang)) include "lang/en.php";
 	<div class="container-fluid p-0">
 		<section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
 			<div class="my-auto">
-				<h1 class="mb-0"><?php echo $lang['name']; ?>
-					<span class="text-primary"><?php echo $lang['lastname']; ?></span>
-				</h1>
-				<div class="subheading mb-5"> 
-					<a href="mailto:vnikolov@pkdevs.com">vnikolov@pkdevs.com</a>
+				<div class="row">
+					<div class="col-md-2" id="main-pic-holder">
+						<img src="img/profile.jpg" alt="Vesko Nikolov">
+					</div>
+					<div class="col-md-10">
+						<h1 class="mb-0 heading-name"><?php echo $lang['name']; ?>
+							<span class="text-primary"><?php echo $lang['lastname']; ?></span>
+						</h1>
+						<div class="subheading mb-5"> 
+							<a href="mailto:vnikolov@pkdevs.com">vnikolov@pkdevs.com</a>
+						</div>
+					</div>
 				</div>
 				
 				<p class="mb-5"><?php echo $lang['intro']; ?></p>
@@ -125,11 +139,11 @@ if(!isset($lang)) include "lang/en.php";
 				</ul>
 
 				<ul class="list-inline list-languages no-print">
-					<li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="Български"><a href="?lang=bg"><img src="img/bg.png"></a></li>
-					<li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="English"><a href="?lang=en"><img src="img/en.png"></a></li>
+					<li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="Български"><a href="?lang=bg"><img alt="bg" src="img/bg.png"></a></li>
+					<li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="English"><a href="?lang=en"><img alt="en" src="img/en.png"></a></li>
 				</ul>
 
-				<a href="pdf/<?php echo $lang['pdf_name']; ?>" target="_blank" class="btn btn-default btn-md btn-download no-print" role="button"><?php echo $lang['download_pdf']; ?></a>
+				<a href="pdf/<?php echo rawurlencode($lang['pdf_name']); ?>" target="_blank" class="btn btn-default btn-md btn-download no-print" role="button"><?php echo $lang['download_pdf']; ?></a>
 
 				<div class="only-print">
 					<span class="fa-stack fa-lg">
@@ -226,7 +240,7 @@ if(!isset($lang)) include "lang/en.php";
 			<div>
 				<h2 class="mb-5"><?php echo $lang['menu_skills']; ?></h2>
 				
-				<?php foreach($skill_cats as $skills_cat): ?>
+				<?php foreach($lang['skill_cats'] as $skills_cat): ?>
 					<div class="subheading mb-3"><?php echo $skills_cat['title']; ?></div>
 					<ul class="list-inline list-icons">
 						<?php foreach($skills_cat['skills'] as $key => $skill): ?>
@@ -251,35 +265,12 @@ if(!isset($lang)) include "lang/en.php";
 		<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="softskills">
 			<div>
 				<h2 class="mb-5"><?php echo $lang['menu_soft_skills']; ?></h2>
-				<div class="soft-skill">
-					<div class="soft-skill-heading"><?php echo $lang['ss_presenting_h']; ?></div>
-					<p><?php echo $lang['ss_presenting_desc']; ?></p>
-				</div>
-
-				<div class="soft-skill">
-					<div class="soft-skill-heading"><?php echo $lang['ss_leader_h']; ?></div>
-					<p><?php echo $lang['ss_leader_desc']; ?></p>
-				</div>
-
-				<div class="soft-skill">
-					<div class="soft-skill-heading"><?php echo $lang['ss_communicative_h']; ?></div>
-					<p><?php echo $lang['ss_communicative_desc']; ?></p>
-				</div>
-
-				<div class="soft-skill">
-					<div class="soft-skill-heading"><?php echo $lang['ss_pressure_h']; ?></div>
-					<p><?php echo $lang['ss_pressure_desc']; ?></p>
-				</div>
-
-				<div class="soft-skill">
-					<div class="soft-skill-heading"><?php echo $lang['ss_learn_h']; ?></div>
-					<p><?php echo $lang['ss_learn_desc']; ?></p>
-				</div>
-
-				<div class="soft-skill">
-					<div class="soft-skill-heading"><?php echo $lang['ss_teacher_h']; ?></div>
-					<p><?php echo $lang['ss_teacher_desc']; ?></p>
-				</div>
+				<?php foreach ($lang['soft_skills'] as $key => $skill): ?>
+					<div class="soft-skill">
+						<div class="soft-skill-heading"><?php echo $skill['h']; ?></div>
+						<p><?php echo $skill['desc']; ?></p>
+					</div>
+				<?php endforeach; ?>
 			</div>
 		</section>
 
@@ -290,7 +281,7 @@ if(!isset($lang)) include "lang/en.php";
 				<div class="subheading mb-3">2014</div>
 				<div class="row">
 					<div class="col-md-6">
-						<img src="img/NOIT_2k14.JPG" style="width: 100%;">
+						<img src="img/NOIT_2k14.JPG" style="width: 100%;" alt="2014 NOIT">
 					</div>
 					<div class="col-md-6">
 						<div class="row">
@@ -301,7 +292,7 @@ if(!isset($lang)) include "lang/en.php";
 
 						<div class="row">
 							<div class="col-md-12">
-								<img src="img/gramota_2k14.jpg" style="width: 100%;">
+								<img src="img/gramota_2k14.jpg" style="width: 100%;" alt="2014 Award">
 							</div>
 						</div>
 					</div>
@@ -318,18 +309,18 @@ if(!isset($lang)) include "lang/en.php";
 
 						<div class="row">
 							<div class="col-md-12">
-								<img src="img/gramota_2k17.jpg" style="width: 100%;">
+								<img src="img/gramota_2k17.jpg" style="width: 100%;" alt="2017 Award">
 							</div>
 						</div>
 					</div>
 					<div class="col-md-5">
-						<img src="img/NOIT_2017.jpg" style="width: 100%;">
+						<img src="img/NOIT_2017.jpg" style="width: 100%;" alt="2017 NOIT">
 					</div>
 				</div>
 				<hr style="page-break-after: always;" />
 				<div class="row">
 					<div class="col-md-7">
-						<img src="img/prezident.JPG" style="width: 100%;">
+						<img src="img/prezident.JPG" style="width: 100%;" alt="President">
 					</div>
 					<div class="col-md-5">
 						<div class="row">
@@ -340,7 +331,7 @@ if(!isset($lang)) include "lang/en.php";
 
 						<div class="row">
 							<div class="col-md-12">
-								<img src="img/sertifikat_2k17.jpg" style="width: 100%;">
+								<img src="img/sertifikat_2k17.jpg" style="width: 100%;" alt="2017 Certificate">
 							</div>
 						</div>
 					</div>
@@ -356,7 +347,7 @@ if(!isset($lang)) include "lang/en.php";
 						</div>
 					</div>
 					<div class="col-md-7">
-						<img src="img/NET.jpg" style="width: 100%;">
+						<img src="img/NET.jpg" style="width: 100%;" alt="2017 NET">
 					</div>
 				</div>
 			</div>

@@ -13,7 +13,6 @@
 	}
 	h3{
 		font-family: "verdana";
-		font-weight: 550;
 		font-size: 1.5rem
 	}
 </style>
@@ -56,7 +55,7 @@ $lang['freelance'] = "Freelance";
 $lang['freelance_experience'] = "Summer of 2016. I felt confident enough to offer my services as a developer on the freelance market. Through this period, I developed one WordPress informative website, one relatively big project based on PHP/Codeigniter and an online store, based on Python/Django. Having in mind my work conditions, that is just about all I can say about those projects.";
 $lang['pluni'] = 'Plovdiv University "Paisii Hilendarski"';
 $lang['software_engineering'] = "Software Engineering";
-$lang['software_engineering_desc'] = 'I am now officially a <a href="https://uni-plovdiv.bg/pages/index/1131/" target="_blank">Software Engineering</a> student at the <a href="https://uni-plovdiv.bg/" target="_blank">Plovdiv University</a>.';
+$lang['software_engineering_desc'] = 'I am now officially a <a href="https://uni-plovdiv.bg/pages/index/1131/" target="_blank">Software Engineering</a>(part time) student at the <a href="https://uni-plovdiv.bg/" target="_blank">Plovdiv University</a>.';
 $lang['current_moment'] = "Current moment";
 $lang['pgi'] = "High school of Economics - Pernik";
 $lang['pgi_h1'] = "Economic Informatics";
@@ -65,24 +64,12 @@ $lang['pgi_desc'] = '<a href="http://pgi-pernik.bg-schools.com" target="_blank">
 $lang['soupberon'] = "Petar Beron Elementary Shool - Pernik";
 $lang['soupberon_h1'] = "Elementary education";
 $lang['soupberon_desc'] = 'The single most important thing I got from my education in <a href="http://www.soupetarberon.info/" target="_blank">here</a> is fluency in English and a basic level of Russian. That\'s also where my experience as a web developer started as it\'s where I met HTML for the first time.';
-$lang['ss_presenting_h'] = "Speaking in front of a crowd and presenting";
-$lang['ss_presenting_desc'] = "My five years of experience in ".$lang['NOIT_link_full']." have thought me to speak in front of a crowd and present ideas and projects while adapting my presentation style in accordance to the audience.";
-$lang['ss_leader_h'] = "Good leader";
-$lang['ss_leader_desc'] = "I think I am a good leader because I can spot every team member's strengths and weaknesses and use that information to split the workload with maximum efficiency.";
-$lang['ss_communicative_h'] = "Communicative";
-$lang['ss_communicative_desc'] = 'I find a common language with a variety of different types of people. Communicating is not a problem for me.';
-$lang['ss_pressure_h'] = "Working under pressure";
-$lang['ss_pressure_desc'] = "I can work very efficiently and with high coordination in intense environments and under pressure, but work in such conditions exhausts me and I prefer to stay away from it.";
-$lang['ss_learn_h'] = "Fast learner";
-$lang['ss_learn_desc'] = 'I adopt new concepts and technologies very quickly.';
-$lang['ss_teacher_h'] = "Good teacher";
-$lang['ss_teacher_desc'] = 'I was very sceptical about my teaching and tutoring skills at first, but feedback from people that I\'ve been mentoring while in PGI made me change my mind. Younger students and some of my peers say that I explain things in an understandable way.';
 $lang['awards_2014_desc'] = 'My first major appearance in IT was back in 2014. I participated in '.$lang['NOIT_link_full'].'. My project <a href="http://oureurope.bg-schools.com" target="_blank">Our Europe</a> was placed third under the "website" category. That in combination with my excellent performance in the theoretical exam brought me second place in the general ranking and thus a silver medal.';
 $lang['awards_2017_noit'] = 'My most successful year yet was 2017. My success started with my excellent performance at '.$lang['NOIT_link_full'].' with my project <a href="https://play.google.com/store/apps/details?id=eu.noit.remindme" target="_blank">Remind Me!</a> which was my first time meeting android development. The project was placed sixth in its category. That in combination with my excellent performance on the test brought me a 6.00 mark.';
 $lang['awards_2017_konkurs'] = 'The success in NOIT earned me an invitation to the <a href="https://www.president.bg/cat37/Nagrada-Jonh-Atanasov/" target="_blank">competition for the "John Atanasov" award</a>, organized by the administration of the Bulgarian presidency.';
 $lang['awards_2017_net'] = 'I marked the end of my most successful year with a first place in the '.$lang['NET_link_full'].' with the project "ChildStatus" which is still under active development. The gist of the project is that parents can ask for their children\'s status and they have extra options for specific situations.';
 
-$skill_cats = [
+$lang['skill_cats'] = [
 	'frontend' => [
 		'title' => "Frontend languages and tools",
 		'skills' => $skills_frend
@@ -94,5 +81,36 @@ $skill_cats = [
 	'other' => [
 		'title' => "Other",
 		'skills' => $skills_other
+	],
+];
+
+$lang['soft_skills'] = [
+	[
+		'h' => "Speaking in front of a crowd and presenting",
+		'desc' => "My five years of experience in ".$lang['NOIT_link_full']." have thought me to speak in front of a crowd and present ideas and projects while adapting my presentation style in accordance to the audience.",
+	],
+	[
+		'h' => "Good leader",
+		'desc' => "I think I am a good leader because I can spot every team member's strengths and weaknesses and use that information to split the workload with maximum efficiency.",
+	],
+	[
+		'h' => "Communicative",
+		'desc' => 'I find a common language with a variety of different types of people. Communicating is not a problem for me.',
+	],
+	[
+		'h' => "Working under pressure",
+		'desc' => "I can work very efficiently and with high coordination in intense environments and under pressure, but work in such conditions exhausts me and I prefer to stay away from it.",
+	],
+	[
+		'h' => "Fast learner",
+		'desc' => 'I adopt new concepts and technologies very quickly.',
+	],
+	[
+		'h' => "Good teacher",
+		'desc' => 'I was very sceptical about my teaching and tutoring skills at first, but feedback from people that I\'ve been mentoring while in PGI made me change my mind. Younger students and some of my peers say that I explain things in an understandable way.',
+	],
+	[
+		'h' => "Teamwork",
+		'desc' => 'While in high school, I worked on projects with the other members of the IT team all the time. Both more experienced and more inexperienced than me.',
 	],
 ];

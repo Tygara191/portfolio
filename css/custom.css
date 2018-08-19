@@ -1,4 +1,4 @@
-#about > div > h1 {
+.heading-name {
   font-size: 3rem;
 }
 
@@ -102,6 +102,15 @@ h3{
     border-color: #ccc;
 }
 
+#main-pic-holder img{
+	width:100%;
+	border: 1px solid #bdbdbd;
+}
+
+#main-pic-holder{
+	display: none;
+}
+
 @media print
 {    
     .no-print, .no-print *
@@ -116,5 +125,9 @@ h3{
 
     .my-auto {
     	margin: 0 !important;
+    }
+
+    #main-pic-holder{
+    	display: block;
     }
 }
