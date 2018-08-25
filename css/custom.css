@@ -31,6 +31,12 @@
 .list-skills-item .icon{
 	display: inline-flex;
 	vertical-align: middle;
+	width:48px;
+}
+
+.list-skills-item .icon .fas{
+	width: 100%;
+	text-align: center;
 }
 
 .subheading.mb-3{

@@ -61,7 +61,7 @@ $skills_bend = [
 	[
 		"icon" => "nodejs-plain",
 		"title" => "Node JS",
-		"percentage" => 90,
+		"percentage" => 70,
 		"color" => "#86CE2F"
 	],
 	[
@@ -83,6 +83,18 @@ $skills_bend = [
 		"color" => "#FD6327"
 	],
 	[
+		"icon_full" => '<i class="fas fa-file-code"></i>',
+		"title" => "Slim PHP",
+		"percentage" => 60,
+		"color" => "#709F39"
+	],
+	[
+		"icon_full" => '<i class="fas fa-file-code"></i>',
+		"title" => "Twig",
+		"percentage" => 70,
+		"color" => "#BCCE2F"
+	],
+	[
 		"icon" => "python-plain",
 		"title" => "Python",
 		"percentage" => 90,
@@ -93,6 +105,24 @@ $skills_bend = [
 		"title" => "Django",
 		"percentage" => 70,
 		"color" => "#103E2E"
+	],
+	[
+		"icon" => "mysql-plain",
+		"title" => "MySQL",
+		"percentage" => 90,
+		"color" => "#00688F"
+	],
+	[
+		"icon" => "mongodb-plain",
+		"title" => "MongoDB",
+		"percentage" => 70,
+		"color" => "#92C671"
+	],
+	[
+		"icon_full" => '<i class="fas fa-sitemap" style="font-size:2.5rem;"></i>',
+		"title" => "REST",
+		"percentage" => 70,
+		"color" => "#0FA1D7"
 	],
 ];
 
@@ -126,5 +156,11 @@ $skills_other = [
 		"title" => "Trello",
 		"percentage" => 90,
 		"color" => "#0079BF"
+	],
+	[
+		"icon" => "ubuntu-plain",
+		"title" => "Ubuntu",
+		"percentage" => 60,
+		"color" => "#DD4814"
 	],
 ];

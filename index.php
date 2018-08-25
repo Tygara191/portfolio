@@ -49,6 +49,7 @@ if(!isset($lang)) include "lang/en.php";
 	<!-- Custom fonts for this template -->
 	<link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<!-- <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet"> -->
 	<link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
@@ -246,7 +247,11 @@ if(!isset($lang)) include "lang/en.php";
 						<?php foreach($skills_cat['skills'] as $key => $skill): ?>
 							<li class="list-skills-item" data-toggle="tooltip" data-placement="top" title="<?php echo $skill['title']; ?>">
 								<div class="icon">
-									<i class="devicon-<?php echo $skill['icon']; ?>"></i>
+									<?php if(isset($skill['icon_full'])): ?>
+										<?php echo $skill['icon_full']; ?>
+									<?php else: ?>
+										<i class="devicon-<?php echo $skill['icon']; ?>"></i>
+									<?php endif; ?>
 								</div>
 								<div class="progress-title">
 									<div class="title"><?php echo $skill['title']; ?></div>
