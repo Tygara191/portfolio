@@ -117,27 +117,6 @@ h3{
 	display: none;
 }
 
-@media print
-{    
-    .no-print, .no-print *
-    {
-        display: none !important;
-    }
-
-    .only-print, .only-print *
-    {
-    	visibility: visible !important;
-    }
-
-    .my-auto {
-    	margin: 0 !important;
-    }
-
-    #main-pic-holder{
-    	display: block;
-    }
-}
-
 .skills-category{
 	/*border: 1px solid red;*/
 
@@ -179,4 +158,46 @@ h3{
 
 .skills-category .heading *{
 	display: inline-block;
+}
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+
+    .only-print, .only-print *
+    {
+    	visibility: visible !important;
+    }
+
+    .my-auto {
+    	margin: 0 !important;
+    }
+
+    #main-pic-holder{
+    	display: block;
+    }
+
+    .skills-category{
+    	margin-bottom: 0;
+    }
+
+    section.resume-section{
+    	padding-top: 0 !important;
+    	margin-bottom: 0 !important;
+    }
+
+    .mb-5{
+    	margin-bottom: 1.5rem !important;
+    }
+    section.resume-section{
+    	min-height: 0 !important;
+    	page-break-after: always;
+    	border-bottom:none;
+    }
+    section#skills{
+    	padding-bottom: 0 !important;
+    }
 }

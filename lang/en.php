@@ -33,7 +33,7 @@ $lang['menu_soft_skills'] = "Soft skills";
 $lang['menu_awards'] = "Awards";
 $lang['name'] = "Veselin";
 $lang['lastname'] = "Nikolov";
-$lang['intro'] = "I am a motivated young IT specialist and software engineer with a clear goal to grow in the IT sector. Currently ".$age." years old, I've divoted the last ".$experience." of them to constant IT activities. I read, write, understand and speak English fluently. My hobbies include electronics, mechanics, cars, audio gear and DJing.";
+$lang['intro'] = "I am a motivated young IT specialist and software engineer with a clear goal to grow in the IT sector. Currently %d years old, I've divoted the last %d of them to constant IT activities. I read, write, understand and speak English fluently. My hobbies include electronics, mechanics, cars, audio gear and DJing.";
 $lang['extracurricular_activity'] = "Extracurricular activity";
 $lang['extracurricular_activity_body_first'] = 'Throughout my entire high school education, I participated annually in '.$lang['NOIT_link_full'].' with various developments and projects. My project in combination with my perfect theoretical preparation brought me a silver medal from my first year in the competition. My next big success was when in December of 2017 I participated in the '.$lang['NET_link_full'].' where my project "ChildStatus" brought me first place in my category. I\'ve also earned other awards and recognitions during those years.';
 $lang['extracurricular_activity_body_second'] = 'High school was a very valuable period for my soft skills too. Many of the teachers would frequently come to me for technical advice. The school has an active IT team that participates in competitions and such. Part of the newcomer students\' preparation was my responsibility. Most of the time I was the one introducing them to programming. This taught me to work with inexperienced people and express complex concepts in an understandable fashion.';
@@ -69,20 +69,6 @@ $lang['awards_2017_noit'] = 'My most successful year yet was 2017. My success st
 $lang['awards_2017_konkurs'] = 'The success in NOIT earned me an invitation to the <a href="https://www.president.bg/cat37/Nagrada-Jonh-Atanasov/" target="_blank">competition for the "John Atanasov" award</a>, organized by the administration of the Bulgarian presidency.';
 $lang['awards_2017_net'] = 'I marked the end of my most successful year with a first place in the '.$lang['NET_link_full'].' with the project "ChildStatus" which is still under active development. The gist of the project is that parents can ask for their children\'s status and they have extra options for specific situations. In case of interest in the project, you can take a look at the <a href="media/childstatus.pptx">presentation</a>';
 
-$lang['skill_cats'] = [
-	'frontend' => [
-		'title' => "Frontend languages and tools",
-		'skills' => $skills_frend
-	],
-	'backend' => [
-		'title' => "Backend languages and tools",
-		'skills' => $skills_bend
-	],
-	'other' => [
-		'title' => "Other",
-		'skills' => $skills_other
-	],
-];
 
 $lang['soft_skills'] = [
 	[
@@ -114,3 +100,27 @@ $lang['soft_skills'] = [
 		'desc' => 'While in high school, I worked on projects with the other members of the IT team all the time. Both more experienced and more inexperienced than me.',
 	],
 ];
+
+$lang['skills_android'] = "For my android development, I've always used Java and Android Studio, therefore I am comfortable with them. I am also comfortable with things like Dagger2, RxJava2, MVP, Butterknife, Room, Retrofit 2, FCM and others.";
+$lang['skills_frontend'] = "I have rich experience with the basic frontend kit - HTML, CSS, JS, jQuery. This allows me to build a fully functional frontend interface, based on given conditions.";
+$lang['skills_angular'] = "I have purely conceptual knowledge and while I do know the basic structures and ways of working, there are some practical details that im not that familiar with.";
+$lang['skills_reactjs'] = "I've looked into and experimented with React. I don't really have executed projects, only educational and experimental things.";
+$lang['skills_bootstrap'] = "My bootstrap experience consists of modifying ready-made designs and assembling custom ones out of pieces of different templates to get a desired result.";
+$lang['skills_backend'] = "The bulk of my experience is in backend development: ";
+$lang['skills_php'] = "PHP is my starter language and therefore I have the most experience in it - %d years. I've developed a lot of different things using PHP - data scraping scripts, websites, scripts to extract hidden files from a flash drive, database migration scripts, database normalization scripts. PHP is my go-to tool for tackling irregular tasks.";
+$lang['skills_codeigniter'] = "I've got 2 developed projects with it. The backend of the \"Подсети ме!\" android app and another more complex project which included a frontend. I can execute even a more complex project using CI.";
+$lang['skills_slim'] = "WWhile looking for a framework to use in my new projects' APIs, I stumbled upon Slim. My experience doesn't go further than the basic concepts and a day of experimenting.";
+$lang['skills_twig'] = "Twig's resemblance to Django's templating engine makes it very easy for me to get into.";
+$lang['skills_python'] = "I met Python for the first time back in 2014. I've used it for web development with both Django and Flask, UIs with pyqt, data scraping, machine learning and other miscellaneous scripts.";
+$lang['skills_django'] = "I've been tinkering around with Django for just about %d years now and it has probably become my go-to framework for most projects I face. I can use Django to make from simple to more complex projects.";
+$lang['skills_mysql'] = "A solid chunk of my projects in the last %d years include MySQL in one way or another. I'd describe my knowledge as mid-level. I can plan out and make a schema based on given conditions. I can write complex SQL queries with joins, groups etc.";
+$lang['skills_mongodb'] = "My experience with Mongo doesn't really go further than a few days of tinkering around and testing, but I'd say those few days have given me enough of an idea to be able to get into an enviroment, where Mongo is used, relatively quickly.";
+$lang['skills_rest'] = "I get the concept and I can apply it to my APIs' design.";
+$lang['skills_other'] = "Other";
+$lang['skills_other_d'] = "Other tools and methodologies I am aware of:";
+$lang['skills_git'] = "My Git experience is nearly an year now. I have no problems with words like repository, branch, stage, commit.";
+$lang['skills_bitbucket'] = "I hold a few of my projects at Bitbucket. I can also work with GitHub.";
+$lang['skills_photoshop'] = "My photoshop skills don't really go beyond resizing an image, clearing a background and simular basic tasks.";
+$lang['skills_wordpress'] = "My experience consists of 1 site. I can make basic sites with WordPress.";
+$lang['skills_trello'] = "I used it to organize the tasks in my last project.";
+$lang['skills_ubuntu'] = "I used Ubuntu for about an year so I can find my way around it. I gave up on it because of the lack of a viable MS Remote Desktop alternative.";
