@@ -137,3 +137,46 @@ h3{
     	display: block;
     }
 }
+
+.skills-category{
+	/*border: 1px solid red;*/
+
+	border-left-width: 4px;
+	border-left-style: solid;
+	padding-left:10px;
+	margin-bottom:50px;
+}
+
+.skills-category .heading h3{
+	margin: 0px;
+	margin-left: 10px;
+	text-transform: none;
+    font-weight: bold;
+    font-family: 'Tahoma',serif;
+    font-size: 2rem;
+}
+
+.skills-category .heading img{
+	height: 57px;
+	padding-bottom: 7px;
+}
+
+.skills-category .heading {
+	padding-bottom: 3px;
+}
+
+.skills-category .content {
+	padding-top:15px;
+}
+
+.skills-category .content ul {
+	padding-left:20px;
+}
+
+.skills-category .content ul li{
+	margin-bottom: 5px;
+}
+
+.skills-category .heading *{
+	display: inline-block;
+}
