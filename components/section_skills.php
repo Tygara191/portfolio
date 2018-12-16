@@ -73,7 +73,7 @@ $skillCategories = [
 		<?php foreach ($skillCategories as $category): ?>
 			<div class="skills-category" style="border-color: <?php echo $category['color']; ?>;<?php if ($category['pbreak']): ?>page-break-after: always;<?php endif; ?>">
 				<div class="heading">
-					<img src="<?php echo $category['img']; ?>">
+					<img src="<?php echo $category['img']; ?>" alt="<?php echo $category['title']; ?>">
 					<h3 style="color: <?php echo $category['color']; ?>"><?php echo $category['title'] ?></h3>
 				</div>
 				<div class="content">
