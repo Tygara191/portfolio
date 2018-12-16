@@ -18,6 +18,11 @@ $experience = $now->diff(new DateTime('2013-01-01'))->y;
 				</h1>
 				<div class="subheading mb-5"> 
 					<a href="mailto:vnikolov@pkdevs.com">vnikolov@pkdevs.com</a>
+					</br>
+					<a href="tel:+359-89-368-0167">+359-89-368-0167</a>
+				</div>
+				<div class="subheading mb-5"> 
+					
 				</div>
 			</div>
 		</div>
@@ -38,6 +43,14 @@ $experience = $now->diff(new DateTime('2013-01-01'))->y;
 					<span class="fa-stack fa-lg">
 						<i class="fa fa-circle fa-stack-2x"></i>
 						<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			</li>
+			<li class="list-inline-item">
+				<a target="_blank" href="https://www.linkedin.com/in/vnikolovpk/">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-linkedin-in fa-stack-1x fa-inverse"></i>
 					</span>
 				</a>
 			</li>
@@ -62,8 +75,14 @@ $experience = $now->diff(new DateTime('2013-01-01'))->y;
 				<i class="fa fa-facebook fa-stack-1x fa-inverse" style="color:white"></i>
 			</span>
 			<span>https://www.facebook.com/404.user.not.foundd</span><br />
-
-			<span class="fa-stack fa-lg">
+      
+      <span class="fa-stack fa-lg">
+				<i class="fa fa-circle fa-stack-2x"></i>
+				<i class="fa fa-linkedin-in fa-stack-1x fa-inverse" style="color:white"></i>
+			</span>
+			<span>https://www.linkedin.com/in/vnikolovpk</span><br />
+      
+  		<span class="fa-stack fa-lg">
 				<i class="fa fa-circle fa-stack-2x"></i>
 				<i class="fa fa-globe fa-stack-1x fa-inverse"></i>
 			</span>
