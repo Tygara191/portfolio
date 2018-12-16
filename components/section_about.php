@@ -18,7 +18,7 @@ $experience = $now->diff(new DateTime('2013-01-01'))->y;
 				</h1>
 				<div class="subheading mb-5"> 
 					<a href="mailto:vnikolov@pkdevs.com">vnikolov@pkdevs.com</a>
-					</br>
+					<br />
 					<a href="tel:+359-89-368-0167">+359-89-368-0167</a>
 				</div>
 				<div class="subheading mb-5"> 
