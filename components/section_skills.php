@@ -24,7 +24,6 @@ $skillCategories = [
 
 		'skills' => [
 			['title' => "Bootstrap", 'desc' => $lang['skills_bootstrap']],
-			['title' => "Angular 6", 'desc' => $lang['skills_angular']],
 			['title' => "ReactJS", 'desc' => $lang['skills_reactjs']]
 		]
 	],
@@ -38,10 +37,11 @@ $skillCategories = [
 		'skills' => [
 			['title' => "PHP", 'desc' => sprintf($lang['skills_php'], $phpExperience)],
 			['title' => "Codeigniter", 'desc' => $lang['skills_codeigniter']],
-			['title' => "Slim PHP", 'desc' => $lang['skills_slim']],
 			['title' => "Twig", 'desc' => $lang['skills_twig']],
 			['title' => "Python", 'desc' => $lang['skills_python']],
 			['title' => "Django", 'desc' => sprintf($lang['skills_django'], $djangoExperience)],
+			['title' => "JavaScript", 'desc' => $lang['skills_javascript']],
+			['title' => "Express JS", 'desc' => $lang['skills_express']],
 			['title' => "MySQL", 'desc' => sprintf($lang['skills_mysql'], $mySQLExperience)],
 			['title' => "MongoDB", 'desc' => $lang['skills_mongodb']],
 			['title' => "REST", 'desc' => $lang['skills_rest']]
@@ -56,11 +56,12 @@ $skillCategories = [
 
 		'skills' => [
 			['title' => "Git", 'desc' => $lang['skills_git']],
-			['title' => "Bitbucket", 'desc' => $lang['skills_bitbucket']],
-			['title' => "Photoshop", 'desc' => $lang['skills_photoshop']],
 			['title' => "WordPress", 'desc' => $lang['skills_wordpress']],
-			['title' => "Trello", 'desc' => $lang['skills_trello']],
-			['title' => "Ubuntu", 'desc' => $lang['skills_ubuntu']]
+			['title' => "Windows", 'desc' => $lang['skills_windows']],
+			['title' => "Kubuntu", 'desc' => $lang['skills_kubuntu']],
+			['title' => "Jira", 'desc' => $lang['skills_jira']],
+			['title' => "Crucible", 'desc' => $lang['skills_crucible']],
+			['title' => "Docker", 'desc' => $lang['skills_docker']]
 		]
 	]
 ]
