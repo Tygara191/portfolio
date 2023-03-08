@@ -66,13 +66,20 @@ $skillCategories = [
 		'color' => "#EABA6F",
 
 		'skills' => [
+			// Work organization
 			['title' => "Git", 'desc' => $lang['skills_git']],
 			['title' => "Jira", 'desc' => $lang['skills_jira']],
+
+			// Deployment
 			['title' => "Docker", 'desc' => $lang['skills_docker']],
+			['title' => "Bitbucket Pipelines", 'desc' => $lang['skills_bitbucket_pipelines']],
+
+			// CMS
 			['title' => "WordPress", 'desc' => $lang['skills_wordpress']],
+
+			// OS
 			['title' => "Windows", 'desc' => $lang['skills_windows']],
-			['title' => "Linux", 'desc' => $lang['skills_linux']],
-			['title' => "Crucible", 'desc' => $lang['skills_crucible']]
+			['title' => "Linux", 'desc' => $lang['skills_linux']]
 		]
 	]
 ]

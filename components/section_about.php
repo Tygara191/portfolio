@@ -63,7 +63,7 @@ $experience = $now->diff(new DateTime('2013-01-01'))->y;
 				<i class="fa fa-circle fa-stack-2x"></i>
 				<i class="fa fa-globe fa-stack-1x fa-inverse"></i>
 			</span>
-			<span>https://vnikolov.pkdevs.com</span><br />
+			<span>https://vnikolov.graosoft.com</span><br />
 
 			<span class="fa-stack fa-lg">
 				<i class="fa fa-circle fa-stack-2x"></i>
