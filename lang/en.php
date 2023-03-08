@@ -46,7 +46,7 @@ $lang['nuvolo_position'] = "Software Engineer II";
 $lang['nuvolo_body'] = 'I currently work at <a href="https://www.nuvolo.com/" target="_blank">Nuvolo</a> as part of the team behind the company\'s Real Estate Asset Management solution. My main day-to-day work includes developing and maintaining backend business logic, hosted by <a href="https://www.servicenow.com/" target="_blank">ServiceNow</a> and also a frontend interface powered by React.';
 $lang['graosoft'] = "Graosoft";
 $lang['graosoft_position'] = "Chief Technology Officer (CTO)";
-$lang['graosoft_body'] = 'My work at <a href="https://graosoft.com/" target="_blank">Graosoft</a> includes but is not limited to planning the architectural direction of projects, supporting members of the technical team, reviewing and providing feedback for their technical implementations, development, solving technical problems, and automation.';
+$lang['graosoft_body'] = 'My work at <a href="https://graosoft.com/" target="_blank">Graosoft</a> includes but is not limited to planning the architectural direction of projects, supporting members of the technical team, reviewing and providing feedback for their technical implementations, development, solving technical problems, process automation.';
 $lang['noit'] = "NOIT";
 $lang['january'] = "January";
 $lang['february'] = "February";
