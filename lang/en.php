@@ -115,7 +115,7 @@ $lang['soft_skills'] = [
 	]
 ];
 
-$lang['skills_android'] = "The Android-related items in my technology stack include Java, Kotlin, Some parts of Jetpack, Dagger2, RxJava2, MVP, MVVM, Butterknife, Room, Retrofit 2, FCM, design patterns and more. Architecturing the way apps are written is something I've got an intense interest in.";
+$lang['skills_android'] = "The Android-related items in my technology stack include Java, Kotlin, Some parts of Jetpack, Dagger2, RxJava2, MVP, MVVM, Butterknife, Room, Retrofit 2, FCM, design patterns and more. Designing the architecture by which apps are written is something I've got an intense interest in.";
 $lang['skills_frontend'] = "I have rich experience with the basic frontend kit - HTML, CSS, JS, jQuery. This allows me to build a fully functional frontend interface, based on given conditions.";
 $lang['skills_angular'] = "I have purely conceptual knowledge and while I do know the basic structures and ways of working, there are some practical details that im not that familiar with.";
 $lang['skills_reactjs'] = "I've got rich experience in ReactJS and have worked with it extensively.";
@@ -127,7 +127,7 @@ $lang['skills_express'] = "I've deployed Express JS as the main web app framewor
 $lang['skills_python'] = "I met Python for the first time back in 2014. I've used it for web development with both Django and Flask, UIs with pyqt, data scraping, machine learning and other miscellaneous scripts.";
 $lang['skills_javascript'] = "It's been the main language I've worked with for several years so I am very comfortable with JS.";
 $lang['skills_django'] = 'I\'ve executed a few projects using Django, more notable examples are <a href="http://analyze.noit.eu/" target="_blank">Анализирай ме!</a> (2016) and <a href="http://klimatici.топлоизолации.bg/" target="_blank">klimatici.bg</a> (2018).';
-$lang['skills_mysql'] = "A sizeable chunk of my projects include MySQL in one way or another. I'd describe my knowledge as mid-level. I can plan out and make a complex schema based on given conditions. I can write complex SQL queries with joins, groups etc.";
+$lang['skills_mysql'] = "A sizable chunk of my projects include MySQL in one way or another. I'd describe my knowledge as mid-level. I can plan out and make a complex schema based on given conditions. I can write complex SQL queries with joins, groups etc.";
 $lang['skills_mongodb'] = "I've used MongoDB as a main database for over an year as part of my experience at Zoiper.";
 $lang['skills_rest'] = "I get the concept and I can apply it to my APIs' design.";
 $lang['skills_other'] = "Other";
