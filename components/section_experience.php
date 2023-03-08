@@ -6,12 +6,35 @@
 
 		<div class="resume-item d-flex flex-column flex-md-row mb-5">
 			<div class="resume-content mr-auto">
+				<h3 class="mb-0"><?php echo $lang['graosoft']; ?></h3>
+				<div class="subheading mb-3"><?php echo $lang['graosoft_position']; ?></div>
+				<p><?php echo $lang['graosoft_body']; ?></p>
+			</div>
+			<div class="resume-date text-md-right">
+				<span class="text-primary"><?php echo $lang['june']; ?> 2022 - <?php echo $lang['current_moment']; ?></span>
+			</div>
+		</div>
+
+		<div class="resume-item d-flex flex-column flex-md-row mb-5">
+			<div class="resume-content mr-auto">
+				<h3 class="mb-0"><?php echo $lang['nuvolo']; ?></h3>
+				<div class="subheading mb-3"><?php echo $lang['nuvolo_position']; ?></div>
+				<p><?php echo $lang['nuvolo_body']; ?></p>
+			</div>
+			<div class="resume-date text-md-right">
+				<span class="text-primary"><?php echo $lang['june']; ?> 2021 - <?php echo $lang['current_moment']; ?></span>
+			</div>
+		</div>
+
+		<div class="resume-item d-flex flex-column flex-md-row mb-5">
+			<div class="resume-content mr-auto">
 				<h3 class="mb-0"><?php echo $lang['zoiper']; ?></h3>
 				<div class="subheading mb-3"><?php echo $lang['zoiper_position']; ?></div>
 				<p><?php echo $lang['zoiper_body']; ?></p>
+				<p><?php echo $lang['zoiper_body_banafo']; ?></p>
 			</div>
 			<div class="resume-date text-md-right">
-				<span class="text-primary"><?php echo $lang['november']; ?> 2018 - <?php echo $lang['current_moment']; ?></span>
+				<span class="text-primary"><?php echo $lang['november']; ?> 2018 - <?php echo $lang['may']; ?> 2021</span>
 			</div>
 		</div>
 

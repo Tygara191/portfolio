@@ -11,7 +11,7 @@
 				<p><?php echo $lang['software_engineering_desc']; ?></p>
 			</div>
 			<div class="resume-date text-md-right">
-				<span class="text-primary"><?php echo $lang['september']; ?> 2018 - <?php echo $lang['current_moment']; ?></span>
+				<span class="text-primary"><?php echo $lang['september']; ?> 2018 - <?php echo $lang['may']; ?> 2022</span>
 			</div>
 		</div>
 

@@ -37,7 +37,6 @@ $skillCategories = [
 		'skills' => [
 			['title' => "PHP", 'desc' => sprintf($lang['skills_php'], $phpExperience)],
 			['title' => "Codeigniter", 'desc' => $lang['skills_codeigniter']],
-			['title' => "Twig", 'desc' => $lang['skills_twig']],
 			['title' => "Python", 'desc' => $lang['skills_python']],
 			['title' => "Django", 'desc' => sprintf($lang['skills_django'], $djangoExperience)],
 			['title' => "JavaScript", 'desc' => $lang['skills_javascript']],
@@ -45,6 +44,18 @@ $skillCategories = [
 			['title' => "MySQL", 'desc' => sprintf($lang['skills_mysql'], $mySQLExperience)],
 			['title' => "MongoDB", 'desc' => $lang['skills_mongodb']],
 			['title' => "REST", 'desc' => $lang['skills_rest']]
+		]
+	],
+	[
+		'title' => $lang['skills_snow'],
+		'img' => 'img/snow.png',
+		'pbreak' => false,
+		'desc' => $lang['skills_snow_description'],
+		'color' => "#80b6a1",
+
+		'skills' => [
+			['title' => $lang['skills_snow_scoped_app_title'], 'desc' => $lang['skills_snow_scoped_app_desc']],
+			['title' => $lang['skills_snow_scripting_title'], 'desc' => $lang['skills_snow_scripting_desc']],
 		]
 	],
 	[
@@ -56,12 +67,12 @@ $skillCategories = [
 
 		'skills' => [
 			['title' => "Git", 'desc' => $lang['skills_git']],
+			['title' => "Jira", 'desc' => $lang['skills_jira']],
+			['title' => "Docker", 'desc' => $lang['skills_docker']],
 			['title' => "WordPress", 'desc' => $lang['skills_wordpress']],
 			['title' => "Windows", 'desc' => $lang['skills_windows']],
-			['title' => "Kubuntu", 'desc' => $lang['skills_kubuntu']],
-			['title' => "Jira", 'desc' => $lang['skills_jira']],
-			['title' => "Crucible", 'desc' => $lang['skills_crucible']],
-			['title' => "Docker", 'desc' => $lang['skills_docker']]
+			['title' => "Linux", 'desc' => $lang['skills_linux']],
+			['title' => "Crucible", 'desc' => $lang['skills_crucible']]
 		]
 	]
 ]
